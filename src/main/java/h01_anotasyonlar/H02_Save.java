@@ -26,13 +26,16 @@ public class H02_Save {
 
         Transaction tx = s.beginTransaction();
 
-        H01_Sehir sehir1 = new H01_Sehir(34, "İstanbul");
-        H01_Sehir sehir2 = new H01_Sehir(01, "Adana");
+        H01_Sehir sehir1 = new H01_Sehir(34, "İstanbul", 18000000);
+        H01_Sehir sehir2 = new H01_Sehir(01, "Adana", 3200000);
 
         s.save(sehir1);
         s.save(sehir2);
 
         tx.commit();
+
+        s.close();
+        sf.close();
     }
 
 }

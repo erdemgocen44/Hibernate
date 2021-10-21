@@ -33,9 +33,22 @@ public class H01_Sehir {
 
     private String sehirAd;
 
-    public H01_Sehir(int sehirPlaka, String sehirAd) {
+    private int sehirNufus;
+
+    public H01_Sehir(int sehirPlaka, String sehirAd, int sehirNufus) {
         this.sehirPlaka = sehirPlaka;
         this.sehirAd = sehirAd;
+        this.sehirNufus = sehirNufus;
+    }
+
+    
+    public H01_Sehir() {};
+    public int getSehirNufus() {
+        return sehirNufus;
+    }
+
+    public void setSehirNufus(int sehirNufus) {
+        this.sehirNufus = sehirNufus;
     }
 
     public int getSehirPlaka() {
@@ -56,6 +69,6 @@ public class H01_Sehir {
 
     @Override
     public String toString() {
-        return "H01_Sehir [sehirAd=" + sehirAd + ", sehirPlaka=" + sehirPlaka + "]";
+        return "H01_Sehir [sehirAd=" + sehirAd + ", sehirNufus=" + sehirNufus + ", sehirPlaka=" + sehirPlaka + "]";
     }
 }
