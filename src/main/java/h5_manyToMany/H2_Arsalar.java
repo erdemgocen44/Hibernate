@@ -14,7 +14,7 @@ public class H2_Arsalar {
     private String sehir;
     
     @ManyToMany(mappedBy= "arsaListesi")
-    private List <H1_Mirasyediler>mirasyediListesi=new ArrayList <>();
+    private List <H1_Mirasyediler>mirasyediListesi=new ArrayList <H1_Mirasyediler>();
     public H2_Arsalar(int arsaNo, String sehir) {
         
         this.arsaNo = arsaNo;

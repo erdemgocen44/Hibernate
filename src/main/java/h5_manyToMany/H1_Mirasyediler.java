@@ -26,7 +26,7 @@ public class H1_Mirasyediler {
             )
     
     
-    private List <H2_Arsalar>arsaListesi=new ArrayList <>();
+    private List <H2_Arsalar>arsaListesi=new ArrayList <H2_Arsalar>();
     public H1_Mirasyediler(int tc, String isim, int yas) {
         super();
         this.tc = tc;
