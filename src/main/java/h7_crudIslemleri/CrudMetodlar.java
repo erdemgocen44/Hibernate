@@ -105,4 +105,34 @@ public class CrudMetodlar {
 		}
 	}
 
+	// id ile bir kaydın maas bilgisini guncelle
+
+	public void maasGuncelle(long id, int maas) {
+		Session session = sf.openSession();
+		Transaction tx = null;
+
+		try {
+			tx = session.beginTransaction();
+			
+			Personel personel=session.get(Personel.class, id);
+			
+			if(personel==null) {
+				System.out.println(id+" id'li personel bulunamadı");
+			}else personel.setMaas(maas);
+			
+			tx.commit();
+			System.out.println(id+" id'li personelin yeni maaşı : "+maas);
+			
+			
+		} catch (HibernateException e) {
+			if (tx != null) { // içi doluysa başarısız işlem
+				tx.rollback(); // işlemi geri al
+			}
+			e.printStackTrace();// exception ın satırını göster
+
+		} finally {
+			session.close();
+		}
+	}
+
 }

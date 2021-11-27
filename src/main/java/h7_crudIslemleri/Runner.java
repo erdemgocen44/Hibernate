@@ -15,8 +15,12 @@ public class Runner {
        metod.personelEkle("Ayşe Mine", "GÖÇEN", 7100);
        
        metod.tumPersoneliListele();
+          
+       metod.maasGuncelle(27, 13500);
        
-       metod.personelSil(23);
+       metod.maasGuncelle(55, 13500);
+       
+       metod.tumPersoneliListele();
         
     }
 }
